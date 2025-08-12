@@ -102,15 +102,13 @@ const MovieGrid = () => {
       </div>
 
       <div className='movies-grid'>
-        <div className='movies-grid'>
-          {filteredMovies.length > 0 ? (
-            filteredMovies.map((movie) => (
-              <MovieCard movie={movie} key={movie.id} />
-            ))
-          ) : (
-            <p className=''>No movies found...</p>
-          )}
-        </div>
+        {filteredMovies.length > 0 ? (
+          filteredMovies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id} />
+          ))
+        ) : (
+          <p className='no-results'>No movies found...</p>
+        )}
       </div>
     </div>
   )
