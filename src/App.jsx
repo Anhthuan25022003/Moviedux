@@ -5,7 +5,6 @@ import './App.css'
 import './styles.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import MovieGrid from './components/MovieGrid'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,7 +14,6 @@ function App() {
       <div className='container'>
         <Header />
       </div>
-      <MovieGrid />
       <Footer />
     </div>
   )
