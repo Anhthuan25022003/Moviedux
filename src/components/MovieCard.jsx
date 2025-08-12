@@ -25,7 +25,7 @@ const MovieCard = ({ movie }) => {
         <p className='movie-card-description '>{movie.description}</p>
       </div>
       <div className='movie-card-actions'>
-        <button className='btn'>Watch Now</button>
+        <button className='btn'>Watch </button>
       </div>
     </div>
   )
