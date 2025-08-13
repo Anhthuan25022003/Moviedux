@@ -3,25 +3,10 @@ import React, { useEffect, useState } from 'react'
 import MovieCard from './MovieCard'
 import '../styles.css'
 
-const MovieGrid = () => {
-  const [movies, setMovies] = useState([])
+const MovieGrid = ({ movies, watchList, toggleWatchList }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [genreFilter, setGenreFilter] = useState('All genres')
   const [ratingFilter, setRatingFilter] = useState('All')
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const data = await axios.get('movies.json')
-        console.log(data)
-
-        setMovies(data.data)
-        console.log(data.data)
-      } catch (error) {
-        console.error('Error fetching movies:', error)
-      }
-    }
-    fetchMovies()
-  }, [])
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value)
@@ -104,7 +89,12 @@ const MovieGrid = () => {
       <div className='movies-grid'>
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
-            <MovieCard movie={movie} key={movie.id} />
+            <MovieCard
+              movie={movie}
+              key={movie.id}
+              toggleWatchList={toggleWatchList}
+              isWatchListed={watchList.includes(movie.id)}
+            />
           ))
         ) : (
           <p className='no-results'>No movies found...</p>

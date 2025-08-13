@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles.css'
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, isWatchListed, toggleWatchList }) => {
   if (!movie) {
     return <div className='movie-card'>Loading...</div>
   }
@@ -14,15 +14,34 @@ const MovieCard = ({ movie }) => {
   }
   return (
     <div className='movie-card' key={movie.id}>
-      <img src={movie.image} alt={movie.title} onError={handleError} />
+      <img
+        src={`images/${movie.image}`}
+        alt={movie.title}
+        onError={handleError}
+      />
       <div className='movie-card-infor'>
         <h3>{movie.title}</h3>
-        <p className='movie-card-year'>{movie.year}</p>
-        <p className='movie-card-genre'>{movie.genre}</p>
-        <p className={`movie-card-rating ${getRatingClass(movie.rating)}`}>
-          Rating: {movie.rating}
-        </p>
-        <p className='movie-card-description '>{movie.description}</p>
+        <div className=''>
+          <p className='movie-card-year'>{movie.year}</p>
+          <span className='movie-card-genre'>{movie.genre}</span>
+          <span className={`movie-card-rating ${getRatingClass(movie.rating)}`}>
+            Rating: {movie.rating}
+          </span>
+        </div>
+        <label className='switch'>
+          <input
+            type='checkbox'
+            checked={isWatchListed}
+            onChange={() => toggleWatchList(movie.id)}
+          ></input>
+          <span className='slider'>
+            <span className='slider-label'>
+              {isWatchListed ? 'In Watchlist' : 'Add to Watchlist'}
+            </span>
+          </span>
+        </label>
+
+        <span className='movie-card-description '>{movie.description}</span>
       </div>
       <div className='movie-card-actions'>
         <button className='btn'>Watch </button>
