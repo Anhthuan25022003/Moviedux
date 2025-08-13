@@ -1,12 +1,44 @@
-# React + Vite
+# 🎬 Moviedux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Moviedux** is a movie streaming web application built with **React**.  
+It allows users to search for movies, view detailed information, watch trailers, filter by genres, and more.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 **Search movies** by title
+- 🎯 **Filter movies** by genre
+- ⭐ **View ratings** and movie details
+- 🎥 **Watch trailers** directly from YouTube
+- 📱 **Responsive UI** for all screen sizes
+- ⚡ High performance with **React + Vite**
+- 🌐 Movie data powered by **TMDB API**
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Vite,
+- **API:** The Movie Database (TMDB)
+- **Routing:** React Router DOM
+- **HTTP Client:** Axios
+- **UI & Animations:** SwiperJS (Carousel)
+- **State Management:** React Hooks (useState, useEffect, useContext if needed)
+
+## 📸 Demo Screenshot
+
+![Moviedux Demo](public/UI.png)
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+git clone https://github.com/your-username/moviedux.git
+cd moviedux
+
+npm install
+
+npm run dev
+
+👨‍💻 Author
+Le Si Thuan
+📧 Email: thuanit@gmail.com
+🌐 GitHub: Anhthuan25022003
+
