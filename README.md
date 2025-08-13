@@ -30,7 +30,7 @@ It allows users to search for movies, view detailed information, watch trailers,
 
 ### 1. Clone the repository
 
-git clone https://github.com/your-username/moviedux.git
+git clone https://github.com/Anhthuan25022003/moviedux.git
 cd moviedux
 
 npm install
@@ -39,6 +39,7 @@ npm run dev
 
 👨‍💻 Author
 Le Si Thuan
-📧 Email: thuanit@gmail.com
-🌐 GitHub: Anhthuan25022003
+<a href='mailto:lesithuandhkh@gmail.com'>📧 Email: thuanit@gmail.com</a>
+
+<a href='https://github.com/Anhthuan25022003'>🌐 GitHub: Anhthuan25022003</a>
 
